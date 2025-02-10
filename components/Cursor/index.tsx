@@ -1,42 +1,37 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from "react";
 
 const Cursor = () => {
   const dot = useRef<HTMLDivElement>(null);
-  const [mouseActive, setMouseActive] = useState(false);
-  const [cursorColor, setCursorColor] = useState('#00ff88');
-  
-  // Initialize with a safe default value
-  const endX = useRef(0);
-  const endY = useRef(0);
+  const [cursorColor, setCursorColor] = useState("#00ff88");
+
   const cursorVisible = useRef(true);
   const cursorEnlarged = useRef(false);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      endX.current = window.innerWidth / 2;
-      endY.current = window.innerHeight / 2;
+    if (dot.current) {
+      dot.current.style.opacity = "1"; // Force cursor visibility
     }
-  }, []); // Runs only on mount
+  }, []);
 
   const toggleCursorVisibility = useCallback(() => {
-    if (!dot.current) return;
-    dot.current.style.opacity = cursorVisible.current ? '1' : '0';
+    if (dot.current) {
+      dot.current.style.opacity = cursorVisible.current ? "1" : "0";
+    }
   }, []);
 
   const toggleCursorSize = useCallback(() => {
-    setMouseActive(cursorEnlarged.current);
-    setCursorColor(cursorEnlarged.current ? '#ff3366' : '#00ff88');
+    setCursorColor(cursorEnlarged.current ? "#ff3366" : "#00ff88");
   }, []);
 
   const mouseOverEvent = useCallback((e: MouseEvent) => {
-    if ((e.target as HTMLElement)?.id === 'cardHover') {
+    if ((e.target as HTMLElement)?.id === "cardHover") {
       cursorEnlarged.current = true;
       toggleCursorSize();
     }
   }, [toggleCursorSize]);
 
   const mouseOutEvent = useCallback((e: MouseEvent) => {
-    if ((e.target as HTMLElement)?.id === 'cardHover') {
+    if ((e.target as HTMLElement)?.id === "cardHover") {
       cursorEnlarged.current = false;
       toggleCursorSize();
     }
@@ -52,25 +47,27 @@ const Cursor = () => {
   }, [toggleCursorVisibility]);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const style = document.createElement('style');
+    if (typeof window !== "undefined") {
+      const style = document.createElement("style");
       style.textContent = `
         * { cursor: none !important; }
       `;
       document.head.appendChild(style);
 
-      document.addEventListener('mousemove', mouseMoveEvent);
-      document.addEventListener('mouseover', mouseOverEvent);
-      document.addEventListener('mouseout', mouseOutEvent);
+      document.addEventListener("mousemove", mouseMoveEvent);
+      document.addEventListener("mouseover", mouseOverEvent);
+      document.addEventListener("mouseout", mouseOutEvent);
+      document.addEventListener("click", toggleCursorVisibility); // Keep cursor visible
 
       return () => {
-        document.removeEventListener('mousemove', mouseMoveEvent);
-        document.removeEventListener('mouseover', mouseOverEvent);
-        document.removeEventListener('mouseout', mouseOutEvent);
+        document.removeEventListener("mousemove", mouseMoveEvent);
+        document.removeEventListener("mouseover", mouseOverEvent);
+        document.removeEventListener("mouseout", mouseOutEvent);
+        document.removeEventListener("click", toggleCursorVisibility);
         document.head.removeChild(style);
       };
     }
-  }, [mouseMoveEvent, mouseOverEvent, mouseOutEvent]);
+  }, [mouseMoveEvent, mouseOverEvent, mouseOutEvent, toggleCursorVisibility]);
 
   return (
     <>
@@ -81,8 +78,8 @@ const Cursor = () => {
             position: fixed;
             top: 0;
             left: 0;
-            z-index: 9999;
-            opacity: 0;
+            z-index: 10000 !important; /* Ensure it's always on top */
+            opacity: 1;
             transition: opacity 0.3s ease-in-out;
             mix-blend-mode: difference;
             will-change: transform;
