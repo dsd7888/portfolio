@@ -45,8 +45,8 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://linkedin.com/in/anuj-dakhara"
-          aria-label="Go To Adenekan Wonderful Linkedin Page"
+          href="https://www.linkedin.com/in/dhruv-d-0a29aa204/"
+          aria-label="Go To Dhruv Dakhara's Linkedin Page"
           title="Linkedin Page"
         >
           <Linkedin />
@@ -54,8 +54,8 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/AnujDakhara7888"
-          aria-label="Go To Adenekan Wonderful Github Page"
+          href="https://github.com/dsd7888"
+          aria-label="Go To Dhruv Dakhara's Github Page"
           title="Github Page"
         >
           <Github />
@@ -63,8 +63,8 @@ const FooterLink: React.FC<IFooterLink &
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href="https://instagram.com/anuj_dakhara"
-          aria-label="Go To Adenekan Wonderful Instagram Page"
+          href="https://www.instagram.com/dhruvdakhara/"
+          aria-label="Go To Dhruv Dakhara's Instagram Page"
           title="Instagram Page"
         >
           <Instagram />

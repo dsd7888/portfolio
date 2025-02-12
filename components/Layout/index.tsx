@@ -42,7 +42,7 @@
       <Main>
         <BodyStyling theme={theme} />
         <Head>
-          <title>{`${title} | Anuj Sureshbhai Dakhara | Personal Portfolio`}</title>
+          <title>{`${title} | Dhruv Dakhara | Personal Portfolio`}</title>
           <meta
             name="msapplication-TileColor"
             content={`${theme ? '#000000' : '#FFFFFF'}`}

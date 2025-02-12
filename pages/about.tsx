@@ -28,8 +28,8 @@ const About = () => {
           {/* Photo Section */}
         <PageWrapper className="photo-section">
           <img
-            src="/img/Anuj.png"
-            alt="Anuj Sureshbhai Dakhara"
+            src="/img/Dhruv.jpeg"
+            alt="Dhruv Dakhara"
             className="profile-photo"
           />
         </PageWrapper>
@@ -38,13 +38,9 @@ const About = () => {
         <PageWrapper className="vision-section">
           <h1 className="vision-title" style={{ color: '#00bcd4 ' }}>Vision</h1>
           <p>
-            I envision a world where technology bridges gaps, simplifies lives,
-            and creates opportunities for everyone. My mission is to develop
-            tools and applications that are not only functional but also
-            meaningful—solutions that inspire innovation while making a positive
-            impact on society. Through a combination of CREATIVITY, TECHNICAL EXPERTISE, 
-            and a USER CENTRIC MINDSET, I aim to contribute to
-            projects that solve real-world challenges and bring ideas to life.
+          I believe in a future where technology empowers individuals, fosters inclusivity, and transforms the way we interact with the world.My mission is to engineer solutions that are innovative, impactful, and accessible applications that go beyond functionality to create meaningful change.  
+
+          By blending technical expertise, creativity, and a problem-solving mindset, I strive to develop technologies that bridge gaps, enhance efficiency, and unlock new possibilities. Whether it's through AI-driven solutions, intelligent systems, or intuitive user experiences, my goal is to contribute to projects that solve real-world challenges and leave a lasting impact on society.
           </p>
         </PageWrapper>
 
@@ -52,23 +48,23 @@ const About = () => {
           <div className="education-section">
             <div className="education-card">
               <div className="card-header">
-                <h4>Stony Brook University</h4>
-                <p className="degree">Honors in Computer Science & Applied Mathematics</p>
+                <h4>P.P Savani University</h4>
+                <p className="degree">BTech in Computer Science</p>
                 <p className="date">Aug 2022 - May 2026</p>
               </div>
               <div className="card-body">
                 <div className="info">
                   <div>
                     <span>🎓 GPA</span>
-                    <p>3.78/4.00</p>
+                    <p>8.93/10.00</p>
                   </div>
                   <div>
-                    <span>🌟 Achievement</span>
-                    <p>Dean's List</p>
+                    <span>🚀 Vision</span>
+                    <p>Impact-Driven </p>
                   </div>
                   <div>
                     <span>📍 Location</span>
-                    <p>Stony Brook, NY</p>
+                    <p>Surat, Gujarat</p>
                   </div>
                 </div>
                 <div className="coursework">
@@ -90,7 +86,7 @@ const About = () => {
         <PageWrapper className="skills-section">
             <h2 className="skills-title"><strong>Skills</strong></h2>
             <div className="skills-cloud">
-              {['Java', 'Python', 'React', 'Node.js', 'CSS', 'HTML', 'MySQL', 'jQuery', 'Django', 'Git', 'JavaScript', 'C++', 'OpenCV', 'GCP'].map((skill, index) => (
+              {['Java', 'Python', 'React', 'Node.js', 'CSS', 'HTML', 'MySQL', 'Flask', 'Git', 'JavaScript', 'C++', 'OpenCV', 'AWS'].map((skill, index) => (
                 <span key={index} className="skill">{skill}</span>
               ))}
             </div>
@@ -98,75 +94,70 @@ const About = () => {
 
 
 
-        <h3 className="intro__text" style={{ color: '#00bcd4  ' }}>Work Experience</h3> <br />
-          <article>
-            <ul className="timeline">
-              <li className="mt-2">
-                <p>
-                  <strong>
-                  Research Assistant 
-                  </strong> 
-                </p>
-                <p>
-                <span style={{ fontSize: "1.2em", fontWeight: "bold", color: "#4caf50 " }}>
-                  Stony Brook University
-                </span>
-                  <strong><span style={{ marginLeft: "533px" }}> August 2023 - Present</span></strong>
-                </p>
-                <p>
-                Designed and optimized a high-performance MERN Stack backend, reducing data latency by 11% and enhancing processing 
-                efficiency by 16% through advanced caching and optimized query execution. Integrated the Apple Health API to enable secure, 
-                real-time patient data access, ensuring seamless interoperability within healthcare systems.
-                <br/>
-                Developed a HIPAA-compliant, modular API with robust encryption, cutting response times by 12% while maintaining 
-                data security and compliance. Led frontend collaboration in Figma, streamlining design-to-development workflows for
-                 a seamless user experience. Additionally, automated report generation using Excel VBA, boosting report delivery speed
-                  by 20% and improving operational efficiency.
-                </p>
-              </li>
-              <li>
-                <p>
-                  <strong>Software Development Intern{' '}</strong>
-                </p>
-                <p>
-                <span style={{ fontSize: "1.2em", fontWeight: "bold", color: "#4caf50 " }}>
-                  Pulp
-                </span>
-                <strong><span style={{ marginLeft: "637px" }}>August 2024 - December 2024</span></strong>
-                </p>
-                <p>
-                Harnessing the power of modern web technologies, I developed a chatbot SDK using React and Next.js, optimizing 
-                cross-platform integration and reducing overall development time by 25%. By designing an intuitive and scalable interface, 
-                I ensured seamless adaptability across diverse applications, enhancing both user experience and developer efficiency.
-                <br/>
-                Expanding into mobile innovation, I engineered a React Native app featuring a gamified scoring system and a 
-                social media-style UI, which boosted user engagement by 22%. Additionally, I implemented an AI-powered highlighter 
-                to extract and store critical data, improving data accuracy by 18% while automating key processes for better efficiency.
-                </p>
-              </li>
+          <h3 className="intro__text" style={{ color: '#00bcd4' }}>Work Experience</h3> 
+<br />
+<article>
+  <ul className="timeline">
+    
+    <li className="mt-2">
+      <p>
+        <strong>Web Development Intern</strong>
+      </p>
+      <p>
+        <span style={{ fontSize: "1.2em", fontWeight: "bold", color: "#4caf50" }}>
+          Jabsz Gaming Studio India
+        </span>
+        <strong><span style={{ marginLeft: "445px" }}>Sept 2024 - Dec 2024</span></strong>
+      </p>
+      <p>
+        Led the development of an employee portal, streamlining internal workflows by integrating 
+        time tracking, leave requests, and onboarding tools, enhancing employee efficiency by 30% and 
+        improving administrative oversight.
+        <br />
+        Optimized frontend performance by implementing React with Vite and Tailwind CSS, reducing load 
+        times by 40%, ensuring a seamless user experience and improving system scalability.
+      </p>
+    </li>
 
-              <li>
-              <p>
-                  <strong>Software Engineering Intern{' '}</strong>
-                </p>
-                <p>
-                <span style={{ fontSize: "1.2em", fontWeight: "bold", color: "#4caf50 " }}>
-                  Social 101
-                </span>
-                <strong><span style={{ marginLeft: "638px" }}>May 2023 - August 2023</span></strong>
-                </p>
-                <p>
-                Engineered and optimized RESTful API endpoints using Node.js and Express, achieving a 7% reduction in response latency 
-                and enhancing data retrieval efficiency. Leveraged MongoDB aggregations to enable real-time analytics and optimize data 
-                storage for high-performance applications.
-                <br/>
-                Integrated third-party APIs (Facebook, Instagram) to automate social media insights and reporting, improving campaign 
-                monitoring accuracy by 8%. Developed secure authentication mechanisms using JWT and OAuth 2.0, ensuring scalability 
-                and seamless user workflows across multiple platforms.
-                </p>
-              </li>
-            </ul>
-          </article>
+    <li>
+      <p>
+        <strong>Machine Learning Intern</strong>
+      </p>
+      <p>
+        <span style={{ fontSize: "1.2em", fontWeight: "bold", color: "#4caf50" }}>
+          GatiSoftTech
+        </span>
+        <strong><span style={{ marginLeft: "560px" }}>June 2024 - July 2024</span></strong>
+      </p>
+      <p>
+        Developed a jewelry recognition system using Python, Flask, PyTorch, and FAISS, implementing a custom 
+        MobileNetV3-based neural network architecture, which improved feature extraction efficiency by 4%.
+        <br />
+        Built a RESTful API for image indexing, utilizing multi-threading and state management, boosting system 
+        performance and reliability for large-scale datasets with advanced computer vision techniques.
+      </p>
+    </li>
+
+    <li>
+      <p>
+        <strong>Web Development Intern</strong>
+      </p>
+      <p>
+        <span style={{ fontSize: "1.2em", fontWeight: "bold", color: "#4caf50" }}>
+          Social 101
+        </span>
+        <strong><span style={{ marginLeft: "590px" }}>Dec 2023 - Jan 2024</span></strong>
+      </p>
+      <p>
+        Spearheaded the development and enhancement of websites for leading companies, ensuring a seamless online 
+        presence and superior user experience, leading to increased user engagement.
+        <br />
+        Collaborated with UI/UX teams to create responsive web interfaces, boosting user satisfaction and web traffic.
+      </p>
+    </li>
+
+  </ul>
+</article>
         </PageWrapper>
       </PageSection>
       <PageWrapper>

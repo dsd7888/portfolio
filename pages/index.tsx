@@ -24,23 +24,21 @@ const Home = () => {
         <PageWrapper>
           <article>
             <motion.h1
-              data-text="Anuj Sureshbhai Dakhara"
+              data-text="Dhruv Dakhara"
               className="intro__text"
               {...getTransitions(0.1)}
             >
-              <mark className="mark">Anuj Sureshbhai Dakhara</mark>
+              <mark className="mark">Dhruv Dakhara</mark>
             </motion.h1>
             <motion.p {...getTransitions(0.3)}>
               {' '}
-              Hi, I’m Anuj Sureshbhai Dakhara, a junior at SUNY Stony Brook University majoring in Computer Science Honors.
-               My academic journey combines a passion for full-stack web development, AI-driven innovations, and data visualization.
-              With experience in tools like React, Next.js, Neo4j, and AWS, I’ve built projects ranging from AI-powered platforms
-               to scalable content management systems. My work reflects a commitment to creating impactful and efficient applications while 
-               embracing emerging technologies.
+              Hi, I’m Dhruv Dakhara, a Computer Science student at Vellore Institute of Technology.
 
-              I’m also an active contributor to campus organizations, where I foster collaboration,
-              innovation, and leadership. Beyond academics, I’m an avid problem-solver who enjoys pushing the boundaries of what technology
-              can achieve.
+              I am passionate about full-stack development, AI-driven solutions, and data engineering, with hands-on experience in React, Next.js, PyTorch, AWS, and MongoDB. My journey in tech has led me to develop and optimize web applications, build AI-powered recognition systems, and work on scalable software solutions.
+
+              From enhancing web interfaces for leading companies to implementing cutting-edge deep learning models for image recognition, I thrive on solving complex problems and pushing the boundaries of innovation.
+
+              Beyond coding, I enjoy collaborating with tech communities and leading initiatives that foster learning and growth. Whether it's developing impactful applications or exploring the latest advancements in AI and software engineering, I am always eager to build, learn, and innovate.
 
               Feel free to explore my {' '}
               <Link href="/projects" aria-label="Go to Projects Page">

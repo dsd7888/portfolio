@@ -14,56 +14,6 @@ import MansoryLayout from '../components/Mansory';
 import MansoryItem from '../components/Mansory/mansory-item';
 import { ProjectsContext } from '../components/Utils/context';
 import { motion } from 'framer-motion';
-
-// const Projects = () => {
-//   const projectsData = useContext(ProjectsContext);
-//   console.log(projectsData);
-//   return (
-//     <Layout title="Project">
-//       <PageSection>
-//         <PageWrapper>
-//           <h1 className="intro__text">Projects.</h1> <br />
-//               <MansoryLayout>
-//                 {projectsData.map((item, index) => (
-//                   <MansoryItem key={index} item={item} />
-//                 ))}
-//               </MansoryLayout>
-//               <MansoryLayout>
-//                 {projectsData.map(
-//                   (item, index) =>
-//                     item.type.includes('project') && (
-//                       <MansoryItem key={index} item={item} />
-//                     )
-//                 )}
-//               </MansoryLayout>
-//               <MansoryLayout>
-//                 {projectsData.map(
-//                   (item, index) =>
-//                     item.type.includes('tools') && (
-//                       <MansoryItem key={index} item={item} />
-//                     )
-//                 )}
-//               </MansoryLayout>
-//               <MansoryLayout>
-//                 {projectsData.map(
-//                   (item, index) =>
-//                     item.type.includes('open-source') && (
-//                       <MansoryItem key={index} item={item} />
-//                     )
-//                 )}
-//               </MansoryLayout>
-//         </PageWrapper>
-//       </PageSection>
-
-//       <PageWrapper>
-//         <FooterLink goto="/resume" className="mt-3 mb-5">
-//           Lets Go To My Resume.
-//         </FooterLink>
-//         <br />
-//       </PageWrapper>
-//     </Layout>
-//   );
-// };
 const Projects = () => {
   const projectsData = useContext(ProjectsContext);
 

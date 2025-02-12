@@ -41,7 +41,7 @@ const Contact = () => {
           <article>
             <p>
               Get in touch or shoot me an email directly on{' '}
-              <b>anuj.dakhara@gmail.com</b>
+              <b>dsd7888@gmail.com</b>
             </p>
           </article>
           <br />
