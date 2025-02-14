@@ -28,16 +28,16 @@ export const actions = (theme: () => void) => [
   }),
 
   createScoutSection({
-    label: 'About Adenekan Wonderful',
+    label: 'About Dhruv',
 
     children: [
       createScoutAction({
-        label: 'About Adenekan Wonderful',
+        label: 'About Dhruv',
         href: '/about',
         keyboardShortcut: ['a'],
       }),
       createScoutAction({
-        label: "Adenekan Wonderful's Reads",
+        label: "Dhruv",
         href: '/about#reads',
       }),
       createScoutAction({
@@ -45,14 +45,14 @@ export const actions = (theme: () => void) => [
         href: '/about#playlist',
       }),
       createScoutAction({
-        label: "Adenekan's Lens",
+        label: "Dhruv's Lens",
         href: '/about#lens',
       }),
     ],
   }),
 
   createScoutSection({
-    label: 'BY Codewonders',
+    label: 'BY Dhruv',
 
     children: [
       createScoutPage({
