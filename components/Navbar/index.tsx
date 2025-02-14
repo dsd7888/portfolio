@@ -24,7 +24,7 @@ const Navbar = () => {
             <Link
               href="/"
               className="navbar-brand"
-              aria-label="Adenekan Wonderful Home"
+              aria-label="Dhruv Dakhara Home"
               tabIndex={show ? -1 : undefined}
             >
               <Logo />

@@ -58,7 +58,7 @@ const Contact = () => {
             transition={{ delay: 0.3 }}
           >
             <p>
-              Have a question or want to work together? I'd love to hear from you!
+              Have a question or want to work together? Get in touch or shoot me an email directly on <b>dsd7888@gmail.com</b>. I'd love to hear from you!
             </p>
           </motion.article>
 

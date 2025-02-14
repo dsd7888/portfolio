@@ -121,7 +121,6 @@ const StyledResume = styled.div`
   }
   iframe {
     width: 100%;
-    filter: invert(var(--invert)) grayscale(calc(var(--invert) - 0.15));
     border: none;
     height: 44.5rem;
     @media (min-width: 768px) {
