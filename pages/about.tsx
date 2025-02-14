@@ -161,6 +161,7 @@ const PageSection = styled.div`
     justify-content: center;
     align-items: center;
     position: relative;
+    padding: 0 1rem;
   }
 
   .hero-title {
@@ -395,18 +396,148 @@ const PageSection = styled.div`
   }
 
   @media (max-width: 768px) {
+    .hero-section {
+      height: auto;
+      min-height: 60vh;
+      padding: 4rem 1rem;
+    }
+
+    .hero-title {
+      font-size: 2.5rem;
+      text-align: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.25rem;
+    }
+
+    .scroll-indicator {
+      bottom: 2rem;
+    }
+
+    .photo-section {
+      padding: 2rem 0;
+    }
+
     .photo-container {
-      width: 250px;
-      height: 250px;
+      width: 180px;
+      height: 180px;
+    }
+
+    .vision-section {
+      margin-top: 2rem;
+    }
+
+    .vision-container {
+      padding: 1.5rem;
+      margin: 0;
+    }
+
+    .vision-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .vision-text {
+      font-size: 0.9rem;
+      line-height: 1.6;
+      text-align: left;
+      margin: 0;
+    }
+
+    .experience-section {
+      padding: 2rem 1rem;
+    }
+
+    .timeline-container {
+      padding: 0;
+    }
+
+    .timeline {
+      margin-left: 1rem;
+    }
+
+    .timeline li {
+      margin-bottom: 2rem;
+    }
+
+    .timeline li p {
+      font-size: 0.9rem;
+      margin: 0.25rem 0;
+    }
+
+    .timeline li p span[style*="marginLeft"] {
+      display: block;
+      margin-left: 0 !important;
+      margin-top: 0.25rem;
+    }
+
+    .skills-section {
+      padding: 2rem 1rem;
     }
 
     .skills-cloud {
-      gap: 0.8rem;
+      gap: 0.75rem;
+      padding: 0;
     }
 
     .skill-item {
-      padding: 0.6rem 1rem;
-      font-size: 0.9rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.85rem;
+      margin: 0.25rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .photo-container {
+      width: 150px;
+      height: 150px;
+    }
+
+    .vision-title,
+    .section-title,
+    .skills-title {
+      font-size: 1.75rem;
+    }
+
+    .timeline:before {
+      left: 0;
+    }
+
+    .timeline li {
+      padding-left: 1.5rem;
+    }
+
+    .timeline li:before {
+      left: -6px;
+      width: 12px;
+      height: 12px;
+    }
+
+    .skill-item {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.8rem;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .hero-title {
+      font-size: 1.75rem;
+    }
+
+    .photo-container {
+      width: 120px;
+      height: 120px;
+    }
+
+    .vision-title,
+    .section-title,
+    .skills-title {
+      font-size: 1.5rem;
     }
   }
 
