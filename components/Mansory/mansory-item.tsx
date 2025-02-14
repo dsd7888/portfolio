@@ -50,6 +50,22 @@ const MansoryItem: React.FC<MansoryItemProps> = ({ item }) => {
             <div className="content__slate">
               <h3>{item.title}</h3>
               <p>{item.description}</p>
+              {item.technologies && (
+                <p className="d-flex flex-wrap">
+                  {item.technologies.map((tech: string, index: number) => (
+                    <span key={index} className="d-block mb-1">
+                      {tech}
+                    </span>
+                  ))}
+                </p>
+              )}
+              <div className="view-details">
+                <span>View Details</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M4.16666 10H15.8333" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
           </MansoryItemStyle>
         </a>
@@ -82,6 +98,13 @@ const MansoryItem: React.FC<MansoryItemProps> = ({ item }) => {
                   ))}
                 </p>
               )}
+              <div className="view-details">
+                <span>View Details</span>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M4.16666 10H15.8333" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                  <path d="M10 4.16666L15.8333 10L10 15.8333" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </div>
             </div>
           </MansoryItemStyle>
 
@@ -178,6 +201,14 @@ const MansoryItemStyle = styled.div`
       transform: none;
       opacity: 1;
     }
+
+    .view-details {
+      opacity: 1;
+      
+      svg {
+        transform: translateX(5px);
+      }
+    }
   }
 
   h3 {
@@ -205,6 +236,22 @@ const MansoryItemStyle = styled.div`
     opacity: 0;
     transform: translateY(10%);
     transition: opacity 300ms ease-in-out 0s, transform 300ms ease-in-out 0s;
+
+    .view-details {
+      margin-top: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.8;
+      transition: opacity 0.2s ease;
+
+      svg {
+        transition: transform 0.2s ease;
+      }
+    }
   }
 
   @media (max-width: 585px) {
