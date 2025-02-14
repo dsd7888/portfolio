@@ -184,6 +184,31 @@ const StyledPage = styled.div`
       animation: bounce 1s ease infinite;
       animation-delay: calc(var(--index) * 0.1s);
     }
+
+    .scroll-indicator {
+      margin-top: 10rem;
+      
+      .mouse {
+        width: 26px;
+        height: 42px;
+        border: 2px solid #ffffff;
+        border-radius: 13px;
+        position: relative;
+        
+        &::before {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 8px;
+          transform: translateX(-50%);
+          width: 4px;
+          height: 8px;
+          background-color: #ffffff;
+          border-radius: 2px;
+          animation: scroll 2s infinite;
+        }
+      }
+    }
   }
 
   /* Photo Section */
@@ -352,6 +377,11 @@ const StyledPage = styled.div`
   @keyframes bounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
+  }
+
+  @keyframes scroll {
+    0% { transform: translate(-50%, 0); opacity: 1; }
+    100% { transform: translate(-50%, 15px); opacity: 0; }
   }
 
   /* Responsive adjustments */
