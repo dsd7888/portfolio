@@ -229,6 +229,10 @@ const PageSection = styled.div`
       background: rgba(255, 255, 255, 0.05);
       box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
     }
+
+    &::placeholder {
+      color: rgba(255, 255, 255, 0.6);  /* Brighter placeholder text */
+    }
   }
 
   .submit-button {
