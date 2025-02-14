@@ -51,15 +51,7 @@ export default class MyDocument extends Document {
           />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="mobile-web-app-capable" content="yes" />
-          <meta
-            name="msapplication-config"
-            content="/icons/browserconfig.xml"
-          />
 
-          <meta
-            name="twitter:image"
-            content="https://i.ibb.co/SxxqTRk/Mac-Book-Pro-16-10.png"
-          />
           <link
             rel="preload"
             as="style"
@@ -137,7 +129,7 @@ export default class MyDocument extends Document {
             sizes="16x16"
             href="/icons/favicon-16x16.png"
           />
-          <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+
           <link rel="icon" href="/favicon.ico" />
           <link rel="manifest" href="/manifest.json" />
           <meta name="robots" content="index, nofollow" />
@@ -146,10 +138,7 @@ export default class MyDocument extends Document {
             href="https://lh3.googleusercontent.com/KUg3rbUWiVpV83Sdsy5FcsGeOlpcOgi1o3wLhcZGmGkjDmWCj4Hh4kLEEn_1b4dGsm9hzW7lGGvEsUpH2wpCRk9vlfod3ojbJyG7Rdb3ViBaBric9MwvP6J422dIifjzdT4gMJdKkWB4TIlfouuwVm9lxBgxoXEoGm3yiF7xMtFPNIEOTbbgG-WcV6I6jGhLj4AKoRJS_M2g2m5g132WKRTgWSLO4D4sL05lRPAATNq2h3bD72vFGm_Zk-r53dJGBe7FlHIcTV6rU85XD7wwF5sKtmddNbO9nbKg1L-W5pGcU-Ntvx9ayUmxMmGck0FXhf3saN6Qys_dh_C31jy1StMNeceswq1cH8712PvVmca1uNircDdNUbgKIstcn2Q3Egw1w_P5fJ17H6Ru7ZB8gmgEtivx8enUeE_TknyYz37p71GEGCg9-E2m5bl9YaUNTnODjQ2Lh8xeXYnsnCFkvw-XTlWFi799mxtjQFbPK32oAbV728dCld7eB8oTcvB4msAah-hukPKOr83q4GeiZlUe-w_L9hXzFDXF5d86CQbD7ypeUnlhdMaZi8KXOXrkEUMD_njXWSFEh9Xdcnt87Yvkz7VqRxbDHUz4Nid5oiUFAYtUgV917fg1PHroY1Iy0R3g97GXAxHsVc0PfzKLcKgZvoDVURscN8jlpDvbwGfiJ_4HwRHFRys=w1080-h1440-no"
           />
           <meta property="og:title" content="Dhruv Dakhara" />
-          <meta
-            property="og:image"
-            content="https://i.ibb.co/SxxqTRk/Mac-Book-Pro-16-10.png"
-          />
+          <meta property="og:image" />
           <meta name="apple-mobile-web-app-title" content="Dhruv Dakhara" />
           <meta name="next-head-count" content="21" />
           <style

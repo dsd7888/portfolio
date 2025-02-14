@@ -20,7 +20,7 @@ const FontToken = css`
 
 const LightTheme = css`
   :root {
-    --bg: #fffdfc;
+    --bg: #323841;
     --button-index: #f4f1ee;
     --cw: #000;
     --invert: 0;
@@ -45,7 +45,7 @@ const LightTheme = css`
 
 const DarkTheme = css`
   :root {
-    --bg: #020a13;
+    --bg: #323841;
     --invert: 1;
     --theme-amount: 1;
     --cw: #e1e1e1;
@@ -452,58 +452,23 @@ export const BackLay = styled.div`
 
 export const Main = styled.main`
   &:before {
-    /* background: #1b1b1b;
-    content: '';
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(currentColor 1px, transparent 1px),
-      linear-gradient(to right, currentColor 1px, transparent 1px);
-    background-size: 109px 96px;
-    color: rgb(224 224 224 / 40%);
-    position: fixed;
-    z-index: -1;
-    background-color: transparent; */
-    background: #1b1b1b;
-    content: '';
-    height: 100vh;
-    width: 100vw;
-    background-image: linear-gradient(currentColor 1px, transparent 1px),
-      linear-gradient(to right, currentColor 1px, transparent 1px);
-    background-size: 94px 90px;
-    color: rgb(113 113 113 / 7%);
-    position: fixed;
-    z-index: -1;
-
-    background-color: transparent;
-    transition: all 0.5s linear;
+    display: none;
   }
 
   &:after {
-    background-image: radial-gradient(at 40% 40%, #1e90ff 0, transparent 50%),
-      radial-gradient(at 90% 10%, #ff69b4 0, transparent 50%),
-      radial-gradient(at 50% 95%, #00ffff 0, transparent 50%),
-      radial-gradient(at 20% 30%, #32cd32 0, transparent 50%),
-      radial-gradient(at 90% 90%, #ffff00 0, transparent 50%),
-      radial-gradient(at 33% 50%, #ff4500 0, transparent 50%),
-      radial-gradient(at 79% 53%, #800080 0, transparent 50%);
+    background-image: 
+      radial-gradient(at 0% 0%, #3d4149 0%, transparent 50%),
+      radial-gradient(at 100% 0%, #404958 0%, transparent 50%),
+      radial-gradient(at 100% 100%, #2a2e35 0%, transparent 50%),
+      radial-gradient(at 0% 100%, #282c33 0%, transparent 50%);
     position: fixed;
     content: '';
     z-index: -1;
     width: 100%;
     height: 100%;
-    filter: blur(100px) saturate(100%);
+    filter: blur(70px);
     top: 0px;
-    opacity: 0.1;
+    opacity: 0.7;
     transform: translateZ(0);
   }
-  /* background-image: repeating-linear-gradient(
-    0deg,
-    var(--pattern),
-    var(--pattern) 1px,
-    transparent 1px,
-    transparent
-  );
-  background-attachment: fixed;
-  background-size: 1px 101px;
-  min-height: 100vh; */
 `;
