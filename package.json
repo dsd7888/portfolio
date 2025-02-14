@@ -1,11 +1,7 @@
 {
-  "name": "codewonders",
-  "version": "1.5.0",
+  "name": "Dhruv Dakhara",
+  "version": "1.0.1",
   "private": false,
-  "license": "MIT",
-  "repository": "git://github.com/adenekan41/codewonders.git",
-  "description": "Adenekan Wonderful's Website",
-  "author": "Adenekan Wonderful <hellocodewonders@gmail.com> (https://codewonders.dev)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -28,6 +24,7 @@
     "react-ga": "^2.7.0",
     "react-ga4": "^2.1.0",
     "react-helmet": "^5.2.1",
+    "react-icons": "^5.4.0",
     "react-progressive-image": "^0.6.0",
     "scoutbar": "^1.1.9",
     "styled-components": "^4.4.1",

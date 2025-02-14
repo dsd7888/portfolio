@@ -12,7 +12,6 @@
   /* -------------------------- Internal Dependencies ------------------------- */
   import Navbar from '../Navbar';
   import AppContext from '../Utils/context';
-  import { initGA, logPageView } from '../Utils/analytics';
   import Cursor from '../Cursor';
   import SkipToMain from '../A11y/skip-to-main';
 
@@ -25,18 +24,9 @@
   }>> = ({ children, title = 'Home' }) => {
     const { theme, loadTheme, show, setTheme } = useContext(AppContext);
     const [skew, setSkew] = useState(10);
-    const logPage = () => {
-      if (!(window as any).GA_INITIALIZED) {
-        initGA();
-        (window as any).GA_INITIALIZED = true;
-      }
-      logPageView();
-    };
+    
 
-    useEffect(() => {
-      logPage();
-      loadTheme();
-    }, [loadTheme, logPage]);
+    
 
     return (
       <Main>

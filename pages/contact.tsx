@@ -4,6 +4,8 @@
 
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { motion, AnimatePresence } from 'framer-motion';
+import { IoSendSharp } from 'react-icons/io5';
 
 /* -------------------------- Internal Dependencies ------------------------- */
 
@@ -14,6 +16,7 @@ const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
   const [isValid, setIsValid] = useState(false);
+  const [focusedField, setFocusedField] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -27,9 +30,13 @@ const Contact = () => {
     );
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (isValid) {
-      setSubmitted(true);
+      // Animate the form submission
+      const submitAnimation = async () => {
+        setSubmitted(true);
+      };
+      await submitAnimation();
     }
   };
 
@@ -37,59 +44,114 @@ const Contact = () => {
     <Layout title="Contact">
       <PageSection>
         <PageWrapper>
-          <h1 className="intro__text">Contact.</h1>
-          <article>
+          <motion.h1 
+            className="intro__text"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            Let's Connect
+          </motion.h1>
+          <motion.article
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.3 }}
+          >
             <p>
-              Get in touch or shoot me an email directly on{' '}
-              <b>dsd7888@gmail.com</b>
+              Have a question or want to work together? I'd love to hear from you!
             </p>
-          </article>
-          <br />
-          {!submitted ? (
-            <div>
-              <div className="fields">
-                <div className="field half">
-                  <input
-                    type="text"
-                    name="name"
-                    id="name"
-                    className="form-control"
-                    placeholder="Name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                  />
+          </motion.article>
+
+          <AnimatePresence mode="wait">
+            {!submitted ? (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+              >
+                <div className="form-container">
+                  <div className="field-wrapper">
+                    <motion.div
+                      className={`field ${focusedField === 'name' ? 'focused' : ''}`}
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
+                    >
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('name')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                      />
+                      <div className="field-border" />
+                    </motion.div>
+
+                    <motion.div
+                      className={`field ${focusedField === 'email' ? 'focused' : ''}`}
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
+                    >
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="Email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        onFocus={() => setFocusedField('email')}
+                        onBlur={() => setFocusedField(null)}
+                        required
+                      />
+                      <div className="field-border" />
+                    </motion.div>
+                  </div>
+
+                  <motion.div
+                    className={`field message-field ${focusedField === 'message' ? 'focused' : ''}`}
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.99 }}
+                  >
+                    <textarea
+                      name="message"
+                      rows={5}
+                      placeholder="Your message..."
+                      value={formData.message}
+                      onChange={handleChange}
+                      onFocus={() => setFocusedField('message')}
+                      onBlur={() => setFocusedField(null)}
+                      required
+                    />
+                    <div className="field-border" />
+                  </motion.div>
+                  <br />
+
+                  <motion.button
+                    className="submit-button"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    disabled={!isValid}
+                    onClick={handleSubmit}
+                  >
+                    <span>Send Message</span>
+                    <IoSendSharp className="send-icon" />
+                  </motion.button>
                 </div>
-                <div className="field half">
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="form-control"
-                    placeholder="Email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-                <div className="field">
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows={5}
-                    className="form-control"
-                    placeholder="Message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
-              </div>
-              <button className="btn btn-default" type="button" onClick={handleSubmit} disabled={!isValid}>
-                Send Message
-              </button>
-            </div>
-          ) : null}
+              </motion.div>
+            ) : (
+              <motion.div 
+                className="success-message"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+              >
+                <h2>Message Sent!</h2>
+                <p>Thank you for reaching out. I'll get back to you soon.</p>
+              </motion.div>
+            )}
+          </AnimatePresence>
         </PageWrapper>
       </PageSection>
 
@@ -97,7 +159,6 @@ const Contact = () => {
         <FooterLink goto="/" className="mt-3 mb-5">
           Go Back Home
         </FooterLink>
-        <br />
       </PageWrapper>
     </Layout>
   );
@@ -108,53 +169,112 @@ const PageSection = styled.div`
     font-size: var(--font-x-lg);
     font-weight: 900;
     margin: 4rem 0rem 1.5rem;
+    background: linear-gradient(45deg, var(--cw), #888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .form-container {
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+
+  .field-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .field {
     position: relative;
+    transition: all 0.3s ease;
+    
+    &.focused {
+      transform: translateY(-2px);
+      
+      .field-border {
+        transform: scaleX(1);
+      }
+    }
   }
-  p {
-    font-size: calc(var(--font-sm) + 0.9px);
-    margin-top: 0.6rem;
-    line-height: 2;
-    font-weight: 400;
-    color: var(--article-color) !important;
+
+  .field-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cw), transparent);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+    transform-origin: left;
   }
-  input,
-  textarea {
-    background: transparent;
-    color: var(--cw) !important;
-    margin-bottom: 2rem;
-    box-shadow: none !important;
-    resize: none;
-    padding: 24px 21px !important;
-    border-color: var(--border-color) !important;
+
+  input, textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    color: var(--cw);
+    transition: all 0.3s ease;
+    
     &:focus {
-      background-color: var(--bg);
+      outline: none;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
     }
   }
-  button {
-    font-size: calc(var(--font-sm) + 1.1px);
-    background: var(--cw);
-    border: none;
+
+  .submit-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: auto;
+    background: linear-gradient(45deg, var(--cw), #888);
     color: var(--bg);
-    border-radius: 5px;
-    padding: 15px 40px;
-    margin-bottom: 3rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .send-icon {
+      transition: transform 0.3s ease;
+    }
+
+    &:hover .send-icon {
+      transform: translateX(4px);
+    }
   }
-  form {
-    width: 60%;
+
+  .success-message {
+    text-align: center;
+    padding: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 12px;
+    margin: 2rem 0;
+
+    h2 {
+      color: var(--cw);
+      margin-bottom: 1rem;
+    }
   }
+
   @media (max-width: 585px) {
-    form {
-      width: 100% !important;
-    }
-  }
-  @media (max-width: 989px) {
-    form {
-      width: 100% !important;
-    }
-  }
-  @media (max-width: 220px) {
-    form {
-      width: 100% !important;
+    .form-container {
+      padding: 0 1rem;
     }
   }
 `;
