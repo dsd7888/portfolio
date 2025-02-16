@@ -90,19 +90,17 @@ const Home = () => {
                 {...getTransitions(0.3)}
               >
                 {' '}
-                Hi, I'm Dhruv Dakhara, a Computer Science student at Vellore Institute of Technology.
-
-                I am passionate about full-stack development, AI-driven solutions, and data engineering, with hands-on experience in React, Next.js, PyTorch, AWS, and MongoDB. My journey in tech has led me to develop and optimize web applications, build AI-powered recognition systems, and work on scalable software solutions.
-
-                From enhancing web interfaces for leading companies to implementing cutting-edge deep learning models for image recognition, I thrive on solving complex problems and pushing the boundaries of innovation.
-
-                Beyond coding, I enjoy collaborating with tech communities and leading initiatives that foster learning and growth. Whether it's developing impactful applications or exploring the latest advancements in AI and software engineering, I am always eager to build, learn, and innovate.
-
+                Hi, I'm Dhruv Dakhara, a Computer Science student at Vellore Institute of Technology. I’m passionate about full-stack development, AI-driven solutions, and data engineering. I love building things—whether it’s intuitive web applications, AI-powered recognition systems, or scalable software solutions.
+                <br />
+                With hands-on experience in React, Next.js, PyTorch, AWS, and MongoDB, I’ve worked on projects ranging from enhancing web interfaces for major companies to implementing deep learning models for image recognition. I thrive on solving complex problems and pushing the boundaries of innovation.
+                <br />
+                Beyond coding, I enjoy collaborating with tech communities, sharing knowledge, and leading initiatives that bring people together. I’m a curious, resourceful, and detail-oriented person who enjoys tackling challenges head-on. Whether it’s developing impactful applications, exploring the latest advancements in AI, or simply brainstorming ideas over iced tea (because coffee is overrated), I’m always excited to build, learn, and innovate.
+                <br />
                 Feel free to explore my {' '}
                 <Link href="/projects" aria-label="Go to Projects Page">
                   Projects
                 </Link>{' '}
-                projects or {' '}
+                or {' '}
                 <Link href="/contact" aria-label="Go to Contact Page">
                   Contact
                 </Link>{' '}
