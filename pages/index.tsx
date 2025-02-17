@@ -90,7 +90,7 @@ const Home = () => {
                 {...getTransitions(0.3)}
               >
                 {' '}
-                Hi, I'm Dhruv Dakhara, a Computer Science student at Vellore Institute of Technology. I’m passionate about full-stack development, AI-driven solutions, and data engineering. I love building things—whether it’s intuitive web applications, AI-powered recognition systems, or scalable software solutions.
+                Hi, I'm Dhruv Dakhara, a Computer Science student at P.P.Savani University. I’m passionate about full-stack development, AI-driven solutions, and data engineering. I love building things—whether it’s intuitive web applications, AI-powered recognition systems, or scalable software solutions.
                 <br />
                 With hands-on experience in React, Next.js, PyTorch, AWS, and MongoDB, I’ve worked on projects ranging from enhancing web interfaces for major companies to implementing deep learning models for image recognition. I thrive on solving complex problems and pushing the boundaries of innovation.
                 <br />
