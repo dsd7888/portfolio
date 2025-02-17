@@ -141,6 +141,7 @@ const PageSection = styled.div`
 
   .gradient-text {
     display: inline-block;
+    font-size: 40px;
     background: linear-gradient(
       90deg, 
       ${props => props.color} 0%,

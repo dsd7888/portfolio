@@ -5,9 +5,9 @@ const PROJECTS_DATA = [
       "A high-performance AI-powered image indexing and retrieval system using deep learning techniques.",
     about:
       "ImageMind is an advanced image indexing and retrieval system built using Python, Flask, PyTorch, and FAISS. It features a custom MobileNetV3-based neural network, significantly enhancing feature extraction efficiency. The system enables large-scale image dataset processing with optimized performance through a RESTful API, multi-threading, and state management. The project integrates attention mechanisms to improve image search accuracy and retrieval speed.",
-    link: "https://github.com/dsd7888/ImageMind",
+    link: "https://github.com/dsd7888",
     imageUrl: "/img/ImageMind.jpeg",
-    github: "https://github.com/dsd7888/ImageMind",
+    github: "https://github.com/dsd7888",
     type: ["project", "AI", "computer-vision"],
     technologies: [
       "Python",
@@ -25,9 +25,9 @@ const PROJECTS_DATA = [
       "A real-time application for retrieving Near Earth Object (NEO) data from NASA’s API.",
     about:
       "NEO Tracker is an interactive web application designed to fetch and analyze real-time Near Earth Object (NEO) data from NASA’s API. The project features advanced data structures and BigData’s JSON parsing techniques for efficient analysis. Users can visualize live NEO data with an interactive UI, built using D3.js for intuitive data representation. Performance optimizations include multi-threading and caching mechanisms in Java to ensure smooth data retrieval and visualization.",
-    link: "https://github.com/dsd7888/NEO-Tracker",
+    link: "https://github.com/dsd7888",
     imageUrl: "/img/Neo.jpeg",
-    github: "https://github.com/dsd7888/NEO-Tracker",
+    github: "https://github.com/dsd7888",
     type: ["project", "data-analysis", "space-tech"],
     technologies: [
       "Java",

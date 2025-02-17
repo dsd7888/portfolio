@@ -20,7 +20,7 @@ const FontToken = css`
 
 const LightTheme = css`
   :root {
-    --bg: #f8f8f8;
+    --bg: #C4D6C1;
     --button-index: #f4f1ee;
     --cw: #000;
     --invert: 0;
