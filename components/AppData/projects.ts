@@ -44,7 +44,7 @@ const PROJECTS_DATA = [
       "An interactive web-based language learning platform for enhanced user engagement.",
     about:
       "KnowledgeNest is a language learning app designed with a responsive and user-friendly interface. It enables seamless course sales while ensuring an immersive learning experience. Built using HTML, JavaScript, and CSS, the platform enhances accessibility across devices, ensuring a smooth and engaging learning journey.",
-    link: "https://github.com/dsd7888/KnowledgeNest",
+    link: "https://dsd7888.github.io/KnowledgeNest/",
     imageUrl: "/img/KnowledgeNest.jpeg",
     github: "https://github.com/dsd7888/KnowledgeNest",
     type: ["project", "education-tech", "web-development"],
