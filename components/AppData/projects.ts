@@ -25,9 +25,9 @@ const PROJECTS_DATA = [
       "A real-time application for retrieving Near Earth Object (NEO) data from NASA’s API.",
     about:
       "NEO Tracker is an interactive web application designed to fetch and analyze real-time Near Earth Object (NEO) data from NASA’s API. The project features advanced data structures and BigData’s JSON parsing techniques for efficient analysis. Users can visualize live NEO data with an interactive UI, built using D3.js for intuitive data representation. Performance optimizations include multi-threading and caching mechanisms in Java to ensure smooth data retrieval and visualization.",
-    link: "https://github.com/dsd7888",
+    link: "https://github.com/dsd7888/NeoTracker",
     imageUrl: "/img/Neo.jpeg",
-    github: "https://github.com/dsd7888",
+    github: "https://github.com/dsd7888/NeoTracker",
     type: ["project", "data-analysis", "space-tech"],
     technologies: [
       "Java",
@@ -56,9 +56,9 @@ const PROJECTS_DATA = [
       "A Python-based project enabling hands-free mouse control using eye movements.",
     about:
       "Eye-Controlled Mouse is an accessibility-focused project that allows users to control their computer's cursor using only their eyes. By leveraging OpenCV and MediaPipe for real-time face tracking, this application enables smooth cursor movement and click actions through blinking or winking, enhancing accessibility and human-computer interaction.",
-    link: "https://github.com/dsd7888/eye-controlled-mouse",
+    link: "https://github.com/dsd7888/eye_controlled_mouse",
     imageUrl: "/img/EyeMouse.jpeg",
-    github: "https://github.com/dsd7888/eye-controlled-mouse",
+    github: "https://github.com/dsd7888/eye_controlled_mouse",
     type: ["project", "AI", "computer-vision", "accessibility"],
     technologies: [
       "Python",
