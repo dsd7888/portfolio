@@ -15,6 +15,7 @@ import {
   Github,
   Instagram,
   Dribble,
+  LeetCode
 } from '../Icons';
 
 /* ---------------------------- Style Dependency ---------------------------- */
@@ -68,6 +69,15 @@ const FooterLink: React.FC<IFooterLink &
           title="Instagram Page"
         >
           <Instagram />
+        </a>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://leetcode.com/u/dsd7888/"
+          aria-label="Go To Dhruv Dakhara's LC Profile"
+          title="LeetCode Page"
+        >
+          <LeetCode />
         </a>
       </SocialMedia>
     </>
